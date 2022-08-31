@@ -31,14 +31,14 @@ namespace Business.Concrete
 
             _carDal.Add(car);
 
-            return new Result(true, Messages.CarAdded);
+            return new SuccessResult(Messages.CarAdded);
         }
 
         public IResult Delete(Car car)
         {
             _carDal.Delete(car);
 
-            return new Result(true, Messages.CarDeleted);
+            return new SuccessResult(Messages.CarDeleted);
         }
 
         public IDataResult<List<Car>> GetAll()
@@ -75,7 +75,7 @@ namespace Business.Concrete
 
             _carDal.Update(car);
 
-            return new Result(true, Messages.CarUpdated);
+            return new SuccessResult(Messages.CarUpdated);
         }
     }
 }
